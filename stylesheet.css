@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+/* LAYOUT */
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 100vw;
+    font-family: 'Overpass', sans-serif;
+}
+
+body,
+.hero-content > * {
+    margin: 0;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 600px;
+    margin-bottom: 5em;
+    border-radius: 0 0 0 6rem;
+    background: url(./images/bg-pattern-intro-mobile.svg),
+    linear-gradient(145deg,
+    rgba(255,143,112,1) 20%,
+    rgba(255,61,84,1) 70%);
+    background-size: 1400px;
+    background-position: 36% 35%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 3em 1.5em;
+}
+
+.nav-menu-container,
+.btn-wrapper,
+.burger-menu {
+    display: none;
+}
+
+.burger-icon:active .burger-menu {
+    display: flex;
+}
+
+.burger-menu {
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 300%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-height: max-content;
+    padding: 1em;
+    background-color: #fefefe;
+    box-shadow: 2px 0 40px #4b5862;
+}
+
+.burger-menu,
+.sub-menus {
+    padding: 1em;
+    border-radius: 6px;
+}
+
+.display-burger-menu {
+    display: flex;
+}
+
+.sub-menu-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.sub-menus {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    width: 94%;
+    background-color: #EFEFF1;
+}
+
+.display-sub-menus {
+    display: flex;
+}
+
+.logo,
+.sub-menu-heading,
+.burger-icon,
+.nav-menu-heading {
+    cursor: pointer;
+}
+
+.sub-menu-heading > *,
+.sub-menus > * {
+    user-select: none;
+}
+
+.sub-menus > *:active {
+    font-weight: 600;
+}
+
+.line {
+    width: 94%;
+    border-bottom: 2px solid #EFEFF1;
+    margin-top: 2em;
+}
+
+.hero-content {
+    align-self: center;
+    width: 300px;
+    text-align: center;
+    margin: auto 0;
+    color: #fefefe;
+}
+
+.fake-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 3em;
+}
+
+section,
+.section-content {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    align-items: center;
+}
+
+.section-two {
+    position: relative;
+    height: 680px;
+    border-radius: 0 6rem 0 6rem;
+    margin: 16em 0 3em 0;
+    background-color: #3A3B58;
+    z-index: 1;
+}
+
+.section-two .section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0 6rem 0 6rem;
+}
+
+.section-three {
+    margin-top: 5em;
+}
+
+footer,
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    background: #25252d;
+    gap: 2em;
+    border-radius: 0 6rem 0 0;
+    margin-top: 3em;
+    padding: 5em 0;
+}
+
+footer div {
+    gap: 0.5em;
+}
+
+/* IMAGES */
+
+.burger-icon {
+    margin: 0 0 0 auto;
+}
+
+.laptop-img,
+.editor-img {
+    display: none;
+}
+
+.editor-img-mobile,
+.phone-img,
+.laptop-img-mobile {
+    justify-self: center;
+    width: 95%;
+    margin: 1em;
+}
+
+.phone-img {
+    position: absolute;
+    top: -32%;
+    left: -4%;
+    z-index: 2;
+}
+
+.pattern-img {
+    position: absolute;
+    top: -45%;
+    left: -40%;
+    width: 170%;
+    z-index: -1;
+}
+
+footer .logo {
+    margin-bottom: 2.5em;
+}
+
+/* TYPOGRAPHY */
+
+.login-btn,
+.sign-up-btn,
+.sub-menus > a,
+.fake-btn-one,
+.fake-btn-two,
+.nav-menu > a,
+footer div > a {
+    text-decoration: none;
+}
+
+.fake-btn-one,
+.fake-btn-two,
+.sign-up-btn {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.sub-menus > a {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #667785;
+}
+
+.sub-menu-heading h3 {
+    color: #4b5862;
+}
+
+.login-btn,
+.sign-up-btn {
+    font-weight: 600;
+    border-radius: 24px;
+}
+
+.login-btn {
+    font-size: 1.25rem;
+    margin: 1em 0 0.25em;
+    padding: 1em 2.5em;
+    color: #25252d;
+}
+
+.sign-up-btn {
+    margin-bottom: 1.5em;
+    padding: 0.9em 2.5em;
+    background: linear-gradient(90deg, 
+    rgba(255,143,112,1) 0%, 
+    rgba(255,61,84,1) 80%);
+    color: #fefefe;
+}
+
+.sign-up-btn:hover,
+.sign-up-btn:active,
+.login-btn:hover,
+.login-btn:active,
+.fake-btn-one:hover,
+.fake-btn-one:active {
+    background-color: rgb(254, 254, 254, 0.2);
+    color: #fefefe;
+}
+
+.fake-btn-two:hover,
+.fake-btn-two:active {
+    background-color: #fefefe;
+    color: #ff3d54;
+}
+
+.fake-btn-one,
+.fake-btn-two {
+    font-weight: 600;
+    border-radius: 24px;
+    padding: 0.75em 1.25em;
+}
+
+.fake-btn-one {
+    background-color: #fefefe;
+    color: hsl(356, 100%, 66%);
+}
+
+.fake-btn-two {
+    border: 1px solid #fefefe;
+    color: #fefefe;
+}
+
+.hero-content h1 {
+    margin-bottom: 0.5em;
+}
+
+.hero-content p {
+    padding: 0 0.5em;
+}
+
+.small-header,
+.section-content p {
+    max-width: 75vw;
+    font-weight: 400;
+    text-align: center;
+}
+
+.small-header {
+    font-size: 1.875rem;
+    color: #1f3f5b;
+}
+
+.section-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 2em 0;
+    color: #4b5862;
+}
+
+.section-two .section-content h1,
+.section-two .section-content p {
+    z-index: 2;
+    color: #fefefe;
+}
+
+.section-two .section-content h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.section-two .section-content p {
+    font-size: 1.125rem;
+    margin: 0 auto 7.5em auto;
+}
+
+footer h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    margin-bottom: 1.25em;
+    color: #fefefe;
+}
+
+footer div > a {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fefefe;
+}
+
+footer div > a:active {
+    text-decoration: underline;
+}
+
+@media (max-width: 320px) {
+    .phone-img {
+        top: -24%;
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* LAYOUT */
+
+    .hero {
+        margin-bottom: 10em;
+        background: url(./images/bg-pattern-intro-mobile.svg),
+        linear-gradient(90deg, 
+        rgba(255,143,112,1) 0%, 
+        rgba(255,61,84,1) 60%);
+        background-size: 2700px;
+        background-position: 20% 54%;
+    }
+
+    nav {
+        align-items: center;
+        max-width: 80vw;
+        min-height: 160px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .nav-menu-container,
+    .nav-menu-heading {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-menu-container {
+        gap: 0.25em;
+    }
+
+    .nav-menu-wrapper {
+        position: relative;
+    }
+
+    .nav-menu-heading {
+        gap: 0.5em;
+        margin-left: 3em;
+        color: #fefefe;
+    }
+
+    .nav-menu-heading:hover,
+    footer div > a:hover {
+        text-decoration: underline;
+    }
+
+    .arrow-icon {
+        transition: transform 0.3s ease-out 100ms;
+    }
+
+    .nav-menu-heading:hover .arrow-icon {
+        transform: rotate(180deg);
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 0.875em;
+        position: absolute;
+        top: 100%;
+        left: 10%;
+        width: 200px;
+        padding: 2em 1.875em;
+        border-radius: 6px;
+        background-color: #fefefe;
+        box-shadow: 0px 6px 24px 14px rgba(0,0,0,0.18);
+    }
+
+    .nav-menu-wrapper:hover .nav-menu {
+        display: flex;
+    }
+
+    .btn-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        margin: auto 0 auto auto;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin: 4em 0 0;
+    }
+
+    section {
+        position: relative;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .section-one {
+        margin: 14em 0 24em 0;
+    }
+    
+    .section-one .section-content {
+        align-self: flex-start;
+        max-width: 585px;
+        margin-left: 8em;
+    }
+
+    .section-two {
+        height: 440px;
+    }
+
+    .section-two .section-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1em;
+    }
+
+    .section-three {
+        margin: 22em 0;
+    }
+
+    .section-three .section-content {
+        align-self: flex-end;
+        max-width: 585px;
+        margin-right: 8em;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+        gap: 14em;
+    }
+
+    footer div {
+        align-items: start;
+        gap: 1em;
+    }
+
+    /* IMAGES */
+
+    .laptop-img-mobile,
+    .editor-img-mobile,
+    .burger-icon {
+        display: none;
+    }
+
+    .editor-img,
+    .laptop-img {
+        display: initial;
+        position: absolute;
+        height: auto;
+        width: 68%;
+    }
+
+    .editor-img {
+        top: -20%;
+        right: -21%;
+    }
+
+    .phone-img {
+        top: -22%;
+        left: 10%;
+        width: 600px;
+    }
+
+    .pattern-img {
+        top: -240%;
+        left: -25%;
+        width: 100%;
+    }
+
+    .laptop-img {
+        top: -42%;
+        left: -18%;
+    }
+
+    footer .logo {
+        margin-left: 10em;
+    }
+
+    /* TYPOGRAPHY */
+
+    .login-btn,
+    .sign-up-btn {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .login-btn {
+        padding: 0.9em 2em;
+        border-radius: 32px;
+        color: #fefefe;
+    }
+
+    .sign-up-btn {
+        padding: 0.9em 2.5em;
+        background: #fefefe;
+        color: #ff3d54;
+    }
+
+    .main-header {
+        margin-bottom: 3em;
+    }
+
+    .nav-menu > a {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #4b5862;
+    }
+
+    .nav-menu > a:hover {
+        font-weight: 600;
+    }
+
+    .hero-content h1 {
+        font-size: 4.5rem;
+        font-weight: 400;
+        margin-bottom: 0.25em;
+    }
+
+    .hero-content p {
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+
+    .section-one .small-header,
+    .section-one .section-content p {
+        align-self: flex-start;
+    }
+
+    .section-one .small-header,
+    .section-one .section-content p,
+    .section-three .small-header,
+    .section-three .section-content p {
+        text-align: left;
+        padding: 0;
+    }
+
+    .section-one .small-header,
+    .section-three .small-header {
+        margin-bottom: 1em;
+    }
+
+    .section-one .section-content p:first-of-type,
+    .section-three .section-content p:first-of-type {
+        margin-bottom: 5em;
+    }
+
+    .section-one .section-content p,
+    .section-three .section-content p {
+        font-size: 1.125rem;
+        line-height: 1.65;
+        word-spacing: 1.5px;
+    }
+
+    .section-two .section-content h1,
+    .section-two .section-content p {
+        grid-column: 2 / -1;
+        width: 90%;
+        text-align: start;
+        margin: 0;
+        padding: 0;
+    }
+
+    .section-two .section-content h1 {
+        align-self: end;
+    }
+
+    .section-two .section-content p {
+        align-self: start;
+    }
+
+    footer div > h3 {
+        margin-bottom: 1.5em;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+/* Sorular;
+
+Hamburger menüyü position kullanarak yapmak doğru mu
+Hamburger menü ile etkileşime girildiğinde position değerleri değişiyor bunu media query ile çözmek mantıklı mı */
