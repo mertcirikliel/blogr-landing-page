@@ -57,7 +57,6 @@ nav {
 }
 
 .burger-menu {
-    /* display: flex; */
     display: none;
     flex-direction: column;
     align-items: center;
@@ -658,8 +657,3 @@ footer div > a:active {
 .attribution a { 
     color: hsl(228, 45%, 44%);
 }
-
-/* Sorular;
-
-Hamburger menüyü position kullanarak yapmak doğru mu
-Hamburger menü ile etkileşime girildiğinde position değerleri değişiyor bunu media query ile çözmek mantıklı mı */
